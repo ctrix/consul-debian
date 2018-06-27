@@ -1,0 +1,5 @@
+version=3
+#opts=pgpsigurlmangle=s/$/.asc/ \
+#For source package:
+https://releases.hashicorp.com/consul/([0-9\.]\.[0-9\.]+)/consul_(.+)_linux_amd64.zip
+
