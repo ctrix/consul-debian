@@ -1,2 +1,6 @@
 LICENSE
 README.md
+
+debian/conf/consul.client.json
+debian/conf/consul.server.json
+

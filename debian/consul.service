@@ -1,0 +1,15 @@
+[Unit]
+Description=Consul
+Documentation=https://www.consul.io/docs/
+After=network.target
+
+[Service]
+Environment="DAEMON_ARGS=agent -config-dir /etc/consul.d"
+EnvironmentFile=-/etc/default/%p
+ExecStart=/usr/bin/consul $DAEMON_ARGS
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

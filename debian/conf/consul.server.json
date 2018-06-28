@@ -1,0 +1,31 @@
+{
+  "datacenter": "setme",
+  "bind_addr": "127.0.0.1",
+  "data_dir": "/var/lib/consul",
+
+  "log_level": "INFO",
+  "enable_syslog": true,
+  "enable_debug": true,
+
+  "server": true,
+  "leave_on_terminate": false,
+  "skip_leave_on_interrupt": true,
+  "rejoin_after_leave": true,
+  "retry_interval": "30s",
+
+  "bootstrap_expect": 1,
+  "retry_join": [
+    "127.0.0.1:8301"
+  ],
+
+  "watches": [
+    {
+        "type": "checks",
+        "handler": "/usr/bin/health-check-handler.sh"
+    }
+  ],
+
+  "telemetry": {
+     "statsite_address": "127.0.0.1:2180"
+  }
+}

@@ -1,1 +1,2 @@
 consul usr/bin
+debian/conf/consul.client.json /etc/consul.d
