@@ -10,8 +10,8 @@ sudo apt-get --no-install-recommends --no-install-suggests \
 
 rm -f ../consul*.orig.tar.gz
 uscan -v --download-current-version
-FILE=`ls -1 ../consul*.orig.tar.gz`
-tar zxvf ../consul*.orig.tar.gz --strip 0
+FILE=`ls -1 ../consul*.orig.tar.*`
+tar xvf ../consul*.orig.tar.* --strip 0
 
 dpkg-buildpackage -us -uc -b --ignore-builtin-builddeps
 debian/rules clean
