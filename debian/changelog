@@ -1,3 +1,9 @@
+consul (1.6.0-0~mc1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Massimo Cetra <mcetra@gmail.com>  Mon, 9 Sep 2019 10:42:00 +0100
+
 consul (1.5.2-0~mc2) unstable; urgency=low
 
   * New upstream version
